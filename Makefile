@@ -43,6 +43,7 @@ template:
 	go run scripts/template.go -version=$(VERSION) > ./template.json
 
 fields:
+	echo schemas/*.yml
 	cat schemas/*.yml > fields.tmp.yml
 	sed -i.bak 's/^/    /g' fields.tmp.yml
 	sed -i.bak 's/---//g' fields.tmp.yml
